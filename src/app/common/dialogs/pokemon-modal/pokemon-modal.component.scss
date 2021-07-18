@@ -1,0 +1,15 @@
+@import "src/config/scss/variables.scss";
+@import "src/config/scss/global_styles.scss";
+
+:host{
+    span{
+        color: black;
+    }
+}
+
+::ng-deep{
+    .mat-dialog-container{
+        background-color: #FFF;
+        border-radius: 10px;
+    }
+}

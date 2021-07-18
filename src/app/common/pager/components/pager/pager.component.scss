@@ -1,0 +1,19 @@
+@import "../../../../../config/scss/variables";
+
+.pagination {
+  float: right;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
+
+  .btn-previous,
+  .btn-next {
+    position: relative;
+    top: 7px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

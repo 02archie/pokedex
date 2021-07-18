@@ -1,0 +1,23 @@
+<div class="pagination">
+  <span>{{ (pager.currentPage * pager.numberPerPage) + 1 }}
+    -
+    {{ (pager.currentPage * pager.numberPerPage) + pager.numberPerPage > pager.numberOfItems ? pager.numberOfItems : (pager.currentPage * pager.numberPerPage) + pager.numberPerPage }}
+     de 
+     {{pager.numberOfItems}}</span>
+  
+  <span class="btn-previous">
+    <i class="material-icons" (click)="previous()">chevron_left</i>
+  </span>
+
+  <span (click)="next()" class="btn-next">
+    <i class="material-icons">chevron_right</i>
+  </span>
+
+  <mat-form-field>
+    <mat-select [(value)]="pager.numberPerPage" (selectionChange)="selectNumberPerPage()">
+      <mat-option [value]="10">10</mat-option>
+      <mat-option [value]="15">15</mat-option>
+      <mat-option [value]="20">20</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>

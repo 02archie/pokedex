@@ -1,7 +1,7 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 
-import { ListPokemonComponent } from "./list-pokemon/list-pokemon.component";
+import { ListPokemonComponent } from "./components/list-pokemon/list-pokemon.component";
 import { LIST_POKEMON } from "./pokemon.constant.module";
 
 const routes: Routes = [
@@ -15,4 +15,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class UsersRoutingModule {}
+export class PokemonRoutingModule {}

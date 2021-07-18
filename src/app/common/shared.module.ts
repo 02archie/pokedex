@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { PokemonModalComponent } from './dialogs/pokemon-modal/pokemon-modal.component';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    PokemonModalComponent
+  ],
   imports: [
     CommonModule
   ]

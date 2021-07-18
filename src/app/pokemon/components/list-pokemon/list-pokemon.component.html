@@ -1,0 +1,60 @@
+<div class="row">
+  <div class="container-fluid m-auto">
+    <div>
+      <img
+        class="d-block w-1/2 m-auto p-5"
+        src="../../../assets/images/logo-pokemon.png"
+        alt=""
+      />
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <form [formGroup]="searchForm">
+      <div class="form-group col-md-5 container-fluid">
+        <mat-icon *ngIf="show_icon">search</mat-icon>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Search by keywords..."
+          formControlName="filter"
+        />
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div
+      class="col-md-2 pt-3 pb-3"
+      *ngFor="
+        let item of list_pokemon;
+        let image of img;
+        let index = index"
+    >
+      <mat-card (click)="showModal(index)">
+        <div class="row">
+          <div class="col-sm-12 text-center image-pokemon">
+            <img src="{{ image.sprites.front_shiny }}" alt="" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center name-pokemon">
+            <span>
+              {{ item.name }}
+            </span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center id-pokemon">
+            <span> {{ "#" + image.id }} </span>
+          </div>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+</div>
+
